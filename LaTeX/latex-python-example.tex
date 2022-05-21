@@ -1,0 +1,33 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{python}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\newtheorem{example}{Example}
+
+\begin{document}
+
+\begin{example}
+This is a quite simple example about using python within \LaTeX:
+\end{example}
+
+\begin{python}
+# a ----> c
+# b ----> x
+#
+def proporcionality(a, b, c, unit):
+sol = (c*b/a)
+  # we need to print LaTeX commands to produce LaTeX output
+  # utf-8 is used
+  print(r'Peter is paid %d %s \ for working %d hours. He will be paid %.2f %s \ for working %d hours.' % (b, unit, a, sol, unit, c))  
+
+proporcionality(10, 120, 40, '\\texteuro')
+\end{python}
+
+\end{document}
+
+
